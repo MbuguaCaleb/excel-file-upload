@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/banks/import',[BanksController::class, 'show']);
-Route::post('/banks/import','BanksController@store');
+Route::post('/banks/import',[BanksController::class, 'store'])->name('upload-file');
+
