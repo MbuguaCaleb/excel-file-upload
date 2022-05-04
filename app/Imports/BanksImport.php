@@ -9,16 +9,11 @@ use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\SkipsOnError;
 
-class BanksImport implements ToModel,WithHeadingRow,SkipsOnError
-{
+
+class BanksImport implements ToModel,WithHeadingRow,SkipsOnError{
 
     use Importable;
 
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
     public function model(array $row)
     {
 
@@ -34,6 +29,5 @@ class BanksImport implements ToModel,WithHeadingRow,SkipsOnError
     {
         // Handle the exception how you'd like.
     }
- 
     
 }
